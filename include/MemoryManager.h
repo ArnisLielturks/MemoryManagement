@@ -1,10 +1,13 @@
+#pragma once
 #include <iostream>
 #include <sstream>
 
 using namespace std;
 
-#define RESERVED_MEMORY (50000 * 24) //Reserved bytes
+//How much bytes to reserve for the memory manager class
+#define RESERVED_MEMORY (500000 * 24) //Reserved bytes
 
+//Simple exception to throw for the memory manager class
 struct OutOfMemoryException : public exception
 {
     string s;
